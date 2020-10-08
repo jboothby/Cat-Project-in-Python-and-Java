@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#scrape OHS for cat data, sort by weight, dump into html file
+java ScrapeCat | sort -k 2rn > TodayCat.html
+
+#append html header and footer to the HTML file
+echo "<html><body><p>" > temp.txt
+cat TodayCat.html >> temp.txt
+echo "</p></body></html>" >> temp.txt
+mv temp.txt TodayCat.html
+
+#email the file to myself
+python mail.py
