@@ -5,4 +5,5 @@ contains all available cats to adopt from the oregon humane society. The program
 associated with each cat such as name, age, weight, and URL for their picture.
 
 The bash script runs this program and pipes the output into sort, which sorts the cats by weight, and then pipes
-the output from sort into the python script which emails the list to me.
+the output from sort into the python script which emails the list to me. The mail program is not my own work, I have just
+included it to show how the program should function.
